@@ -1,18 +1,8 @@
-# agents.md
-# INSTRUCTIONS: Generate a draft using your RICE prompt, then manually refine this file.
-# Delete these comments before committing.
+role: Complaint classification agent that categorizes civic complaints and assigns priority flags based on input data.
 
-role: >
-  [FILL IN: Who is this agent? What is its operational boundary?]
+intent: Correctly classify each complaint into appropriate category and assign an accurate priority flag with clear justification, avoiding ambiguity and ensuring consistency.
 
-intent: >
-  [FILL IN: What does a correct output look like — make it verifiable]
-
-context: >
-  [FILL IN: What information is the agent allowed to use? State exclusions explicitly.]
-
-enforcement:
-  - "[FILL IN: Specific testable rule 1]"
-  - "[FILL IN: Specific testable rule 2]"
-  - "[FILL IN: Specific testable rule 3]"
-  - "[FILL IN: Refusal condition — when should the system refuse rather than guess?]"
+context: 
+  - Input file is ../data/city-test-files/test_[your-city].csv
+  - Contains 15 rows per city
+  - 'category' and 'priority_flag' columns are missing and must be generated
